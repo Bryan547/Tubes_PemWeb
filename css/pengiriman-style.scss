@@ -1,0 +1,50 @@
+@import "https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap";
+*{
+	font-family: "Poppins", sans-serif;
+    // background-color: red;
+	// color: white;
+	scroll-behavior: smooth;
+}
+
+.container{
+    margin: 0 10em;
+
+    .bc{
+        position: absolute;
+        z-index: -100;
+    }
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+
+    ul{
+        display: flex;
+        gap: 40px;
+    }
+
+    li{
+        display: inline-flex;
+        list-style-type: none;
+    }
+}
+
+.navbar{
+    // 
+}
+
+.container-title{
+    font-size: 43px;
+}
+
+.container-info{
+    color: white;
+    background: rgb(30,8,48);
+    background: linear-gradient(180deg, rgba(30,8,48,1) 23%, rgba(144,0,72,1) 100%);
+}
+
+.tabel-pertama-dan-kedua{
+    display: flex;
+    flex-direction: row;
+}

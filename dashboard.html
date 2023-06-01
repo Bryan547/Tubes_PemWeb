@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dashboard-style.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <section>
+        <h1 class="title">Tambah Data</h1>
+        <form action="functions.php" method="post">
+            <div class="input-container ic1">
+                <label>
+                    <input type="text" class="input" id="nama_barang" name="nama_barang" placeholder="Nama Barang">
+                </label>
+            </div>
+            <div class="input-container ic2">
+                <label>
+                    <input type="text" class="input" id="jumlah_barang" name="jumlah_barang"
+                        placeholder="Jumlah Barang">
+                </label>
+            </div>
+            <div class="input-container ic2">
+                <label>
+                    <input type="text" class="input" id="harga_barang" name="harga_barang" placeholder="Harga Barang">
+                </label>
+            </div>
+            <div class="input-container ic2">
+                <button class="submit" type="text" name="submit">Submit</button>
+            </div>
+        </form>
+    </section>
+    <div>
+        <section>
+            <h1 class="title">Data Barang</h1>
+            <table border="1" cellpadding="10" cellspacing="0">
+                <tr>
+                    <td>No</td>
+                    <td>Nama Barang</td>
+                    <td>Jumlah Barang</td>
+                    <td>Berat Barang</td>
+                    <td>Kategori Barang</td>
+                    <td>Action</td>
+                </tr>
+                <tr>
+                    <?php
+                include 'koneksi.php';
+    
+                $q = mysqli_query($conn, "SELECT * FROM barang");
+                $no = 1;
+                while ($hasil = mysqli_fetch_array($q)){
+                ?>
+                <tr>
+                    <td>
+                        <?php echo $no++;?>
+                    </td>
+                    <td>
+                        <?php echo $hasil['nama_barang'];?>
+                    </td>
+                    <td>
+                        <?php echo $hasil['jumlah_barang'];?>
+                    </td>
+                    <td>
+                        <?php echo $hasil['berat_barang'];?>
+                    </td>
+                    <td>
+                        <?php echo $hasil['kategori_barang'];?>
+                    </td>
+                    <!-- <td><?php echo $hasil['nama_toko'];?></td>
+                    <td><?php echo $hasil['alamat_toko'];?></td> -->
+                    <td>
+                        <a href="edit.php">EDIT</a> |
+                        <a href="delete.php">DELETE</a>
+                    </td>
+                </tr>
+                </tr>
+                <?php
+                }
+            ?>
+            </table>
+        </section>
+</body>
+
+</html>

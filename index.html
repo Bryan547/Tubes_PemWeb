@@ -1,0 +1,183 @@
+<!-- <?php 
+ 
+session_start();
+ 
+if (!isset($_SESSION['username'])) {
+    header("Location: home.php");
+}
+ 
+?> -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <title>Sendlogs</title>
+</head>
+
+<body>
+  <section class="navigation">
+    <div class="nav-container">
+      <div class="brand">
+        <img src="./images/logo.png" class="logo" alt="logo">
+      </div>
+      <nav>
+        <div class="nav-mobile"><a id="nav-toggle" href="#!"></a></div>
+        <ul class="nav-list">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#!">Pricing</a>
+          </li>
+          <li>
+            <a href="#benefit">Benefit</a>
+          </li>
+          <li>
+            <a href="#!">Blog</a>
+          </li>
+          <li>
+            <a href="#!">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </section>
+
+  <!-- hero 1 -->
+  <section class="hero">
+    <div class="left">
+      <section class="title-landpage" id="home">
+        <div class="title">
+          <h3 class="paraf1">
+            Halo, Selamat datang
+          </h3>
+          <h1 class="paraf2">
+            Temukan pekerjaan dan <br>
+            pengiriman barangmu
+          </h1>
+          <p class="paraf3">
+            Pilihlah pengiriman yang sudah pasti <br>
+            aman
+          </p>
+        </div>
+
+        <!-- buttton -->
+        <div class="button">
+          <button class="daftar-button">
+            <a href="register.php" class="daftar">Daftar</a>
+          </button>
+          <span class="space"></span>
+          <button class="login-button">
+            <a href="login.php" class="login">Login</a>
+          </button>
+        </div>
+      </section>
+    </div>
+    <div class="right">
+      <img style="width: 125px; height: 127px;" src="./images/notif.png" class="notif"/>
+      <img style="width: 151px; height: 151px;" src="./images/location-dynamic-color.png" class="ldc"/>
+      <img style="width: 156px; height: 156px;" src="./images/travel-dynamic-color.png" class="tdc"/>
+      <img style="width: 131px; height: 131px;" src="./images/mobile-dynamic-color.png" class="mdc"/>
+      <img style="width: 122px; height: 122px;" src="./images/umbrella-dynamic-color.png" class="udc"/>
+      <img src="./images/Vectary texture.png" alt="helm" class="helm">
+    </div>
+  </section>
+
+  <!-- hero 2 -->
+  <section class="hero2">
+    <div class="left2">
+      <img src="./images/pesan_ungu-removebg-preview.png" alt="logo pesan" class="image-hero2">
+    </div>
+    <div class="right2">
+      <h1 class="paraf1-hero2">
+        <p>Keuntungan <br> Menggunakan Jasa Kami</p>
+      </h1>
+      <p class="paraf2-hero2">
+        Dengan Jasa kami, akan mempermudah pekerjaan dan <br>
+        pengiriman anda selama di perjalanan dan pemesanan <br>
+        Karena layanan kami sudah bekerja sama dengan <br>
+        berbagai macam ekspedisi terpercaya
+      </p>
+    </div>
+  </section>
+
+  <!-- hero 3 -->
+  <section class="hero3" id="benefit">
+    <div class="left3">
+      <div class="paraf1-hero3">
+        <h1>Benefit yang bisa kamu <br> dapatkan</h1>
+      </div>
+      <div class="paraf2-hero3">
+        <p>Hal yang bisa kamu dapatkan di jasa kami adalah</p>
+        <ol>
+          <li>Pencarian barang mudah</li>
+          <li>Transaksi</li>
+          <li>Pelacakan barang</li>
+          <li>Cek tarif barang</li>
+          <li>Dan masih banyak lainnya</li>
+        </ol>
+      </div>
+    </div>
+    <div class="right3">
+      <img src="./images/kapur-removebg-preview.png" alt="kapur" class="kapur">
+    </div>
+  </section>
+
+  <!-- footer -->
+  <section class="footer">
+    <div class="left-footer">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="explain-logo">
+        <p>Sebuah jasa dibidang logistik, yang dimana <br>
+          dapat membantu anda semua para penjual <br>
+          dan konsumen dalam menentukan perjalan <br>
+          barang anda. Dengan jaminan barang anda <br>
+          sampai dengan selamat, serta utuh sampai <br>
+          ketangan pelanggan.
+        </p>
+      </div>
+    </div>
+    <div class="right-footer">
+      <ul>
+        <li>
+          <img src="./images/alamat.png" alt="address">
+          <p class="content-list">
+            Simprug, Kebayoran Lama Universitas Pertamina Jakarta Selatan
+          </p>
+        </li>
+        <li>
+          <img src="./images/telpon.png" alt="phone">
+          <p class="content-list">
+            +62 81654615649 (Asep)
+          </p>
+        </li>
+        <li>
+          <img src="./images/email.png" alt="email">
+          <p class="content-list">
+            SendLogs23@yahoo.com
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- copyright -->
+  <section class="copyright">
+    <p><script> document.write(new Date().getFullYear())</script> Copyright © 
+    SendsLogs/UniPer/jakarta</p>
+  </section>
+  <script src="./script.js"></script>
+</body>
+
+</html>
